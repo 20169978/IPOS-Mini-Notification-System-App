@@ -1,4 +1,4 @@
-from user import User
+from src.user import User
 
 class Editor(User):
     def __init__(self, name):

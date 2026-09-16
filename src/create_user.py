@@ -1,6 +1,6 @@
-from admin import Admin
-from editor import Editor
-from viewer import Viewer
+from src.admin import Admin
+from src.editor import Editor
+from src.viewer import Viewer
 
 def create_user(user_type, name):
     '''
