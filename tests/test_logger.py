@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from src.logger import action_logger, user_action_logger
+from src.logger import action_logger, user_action_logger, read_logs
 
 class TestLogger(TestCase):
     def test_user_action_logger_works(self):
@@ -19,3 +19,7 @@ class TestLogger(TestCase):
         result = user.sum(13, 17)
 
         self.assertEqual(result, expected)
+    def test_read_logs(self):
+        logs = list(read_logs("logs.txt"))
+
+        self.assertGreater(len(logs), 0)
